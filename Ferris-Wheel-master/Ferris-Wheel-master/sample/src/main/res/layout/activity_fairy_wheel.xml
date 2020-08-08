@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SampleKotlinActivity">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+
+            android:layout_marginTop="50dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3136435737091654/6224177516">
+        </com.google.android.gms.ads.AdView>
+        <com.github.igla.ferriswheel.FerrisWheelView
+            android:id="@+id/ferrisWheelView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            app:fwv_baseStrokeColor="#666666"
+            app:fwv_cabinsNumber="8"
+            app:fwv_isClockwise="true"
+            app:fwv_rotateSpeed="6"
+            app:fwv_startAngle="10"
+            app:fwv_wheelStrokeColor="#7fbfe9" />
+
+        <TextView
+            android:id="@+id/tvAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            android:text="Open SampleJava Activity"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <include
+        layout="@layout/bottomsheet_settings_attributes" />
+
+</android.support.design.widget.CoordinatorLayout>
